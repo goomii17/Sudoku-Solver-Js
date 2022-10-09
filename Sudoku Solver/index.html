@@ -1,0 +1,74 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sudoku Solver</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="./logic.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
+	<link rel="icon" sizes="64x64" type="image/png" href="/sudoku.png" />
+	<style id="thumb" type="text/css"></style>
+</head>
+
+<body>
+	<div id="header">
+		<div id="title">
+			<strong>Sudoku Solver</strong>
+		</div>
+		<div class="options">
+			<span class="slider">
+				<label id="label" for="slider"><strong>Sudoku size:</strong></label>
+				<input type="range" min="0" max="2" steps="1" name="slider" value="1"
+					onchange="randomize(); disableButtons()" id="size">
+			</span>
+
+			<span class="buttons">
+				<button onclick="randomize()" id="randomize">
+					Random
+				</button>
+				<button onclick="writeMode()" id="write">
+					Edit Mode
+				</button>
+				<button onclick="reset()" id="reset">
+					Reset
+				</button>
+				<button onclick="solve()" id="solve">
+					Solve!
+				</button>
+			</span>
+		</div>
+	</div>
+	<div id="content">
+		<div id="canvasContainer"></div>
+		<div id="numbers">
+			<span class="numbrs">
+				<span><button id="b1" onclick="enterKey(str(1))">1</button></span>
+				<span><button id="b2" onclick="enterKey(str(2))">2</button></span>
+				<span><button id="b3" onclick="enterKey(str(3))">3</button></span>
+				<span><button id="b4" onclick="enterKey(str(4))">4</button></span>
+				<span><button id="b5" onclick="enterKey(str(5))">5</button></span>
+				<span><button id="b6" onclick="enterKey(str(6))">6</button></span>
+				<span><button id="b7" onclick="enterKey(str(7))">7</button></span>
+				<span><button id="b8" onclick="enterKey(str(8))">8</button></span>
+				<span><button id="b9" onclick="enterKey(str(9))">9</button></span>
+				<span><button id="b10" onclick="enterKey('A')">A</button></span>
+				<span><button id="b11" onclick="enterKey('B')">B</button></span>
+				<span><button id="b12" onclick="enterKey('C')">C</button></span>
+				<span><button id="b13" onclick="enterKey('D')">D</button></span>
+				<span><button id="b14" onclick="enterKey('E')">E</button></span>
+				<span><button id="b15" onclick="enterKey('F')">F</button></span>
+				<span><button id="b16" onclick="enterKey('G')">G</button></span>
+			</span>
+			<span><button id="backspace" onclick="enterKey('Backspace')">Delete</button></span>
+		</div>
+
+	</div>
+	<div id="closer">
+		<p id="byMe">
+			By Sergio Herreros Pérez alias Gomi
+		</p>
+	</div>
+</body>
+
+</html>

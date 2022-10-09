@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(70, 126, 126);
+    padding: 10px;
+}
+
+#title {
+    font-size: 42px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#header .options {
+    text-align: center;
+}
+
+.slider label {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+#size {
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 10px;
+    width: 125px;
+    height: 8px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+}
+
+#size::-webkit-slider-thumb:hover {
+    background: #4c6279;
+}
+
+#size:disabled::-webkit-slider-thumb {
+    background: #a3adb8;
+}
+
+#randomize:disabled {
+    background: #a3adb8;
+}
+
+#reset:disabled {
+    background: #a3adb8;
+}
+
+.options .buttons button {
+    color: #fff !important;
+    background: #2c3e50;
+    padding: 4px 6px 4px 6px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.options .buttons button:hover {
+    background-color: #4c6279;
+    color: #0e7a0e;
+}
+
+body {
+    background-color: rgb(153, 185, 185);
+    /* Expand the background to cover the entire page */
+    min-height: 100%;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content {
+    padding-top: 110px;
+    text-align: center;
+    flex: 1;
+    flex-direction: column;
+}
+
+#canvasContainer {
+    padding: 20px;
+}
+
+#numbers {
+    display: inline-block;
+    padding-bottom: 10px;
+    /* width: 500px; */
+    width: 45%;
+}
+
+#numbers .numbrs button {
+    font-size: 24px;
+    padding: 4px 15px 4px 15px;
+    background-color: blanchedalmond;
+    color: brown;
+    width: 56px;
+    margin: 5px;
+    border-radius: 20%;
+}
+
+#numbers .numbrs button:hover:enabled {
+    color: white;
+    background-color: rgb(112, 93, 9);
+}
+
+#numbers button:disabled {
+    background: #a3adb8;
+}
+
+#backspace {
+    font-size: 24px;
+    padding: 4px 15px 4px 15px;
+    background-color: blanchedalmond;
+    color: brown;
+    width: 100px;
+    margin: 5px;
+}
+
+#backspace:hover:enabled {
+    color: white;
+    background-color: rgb(112, 93, 9);
+}
+
+#closer {
+    z-index: 1;
+    background-color: rgb(70, 126, 126);
+    padding: 10px;
+    margin-top: 20px;
+    /* Keep the footer at the bottom of the page */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#byMe {
+    font-size: 16px;
+    color: #fff;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
